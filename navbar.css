@@ -1,0 +1,43 @@
+/* Custom styles for the navbar */
+.navbar {
+    background-color: #00052b;
+    border-bottom: 2px solid #088604; /* Example color; adjust as needed */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ecc30c; /* Example color; adjust as needed */
+}
+
+.navbar-nav .nav-link {
+    color: #f1f1f1; /* White text color */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.navbar-nav .nav-link.active{
+    color: #0258f8;
+}
+.navbar-nav .nav-link:hover {
+    color: #0413e4; /* Highlight color for active link and on hover */
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2876, 175, 80, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.btn-outline-light {
+    color: #ff4757; /* Adjust button text color */
+    border-color: #ff4757; /* Adjust button border color */
+}
+
+.btn-outline-light:hover {
+    background-color: #ff4757; /* Adjust button hover background color */
+    color: #ffffff; /* Adjust button hover text color */
+}
+
+#Comix_category{
+    text-shadow: #00052b;
+    color: aqua;
+
+}

@@ -1,0 +1,102 @@
+/* styles.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* background-color: #f0f0f0; */
+    width: 100%;
+    height: 100%;
+    --s: 200px; /* control the size */
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;
+  
+    background: repeating-conic-gradient(
+          from 30deg,
+          #0000 0 120deg,
+          var(--c3) 0 180deg
+        )
+        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+      repeating-conic-gradient(
+        from 30deg,
+        var(--c1) 0 60deg,
+        var(--c2) 0 120deg,
+        var(--c3) 0 180deg
+      );
+    background-size: var(--s) calc(var(--s) * 0.577);
+  
+}
+
+.carousel-container {
+    width: 600px; /* Adjust based on comic book size */
+    overflow: hidden;
+    
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+ .carousel-item {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+} 
+
+.carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+
+.carousel-button {
+    background-color: #222831;
+    color: #16FF00;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.image-container {
+    position: relative; /* Needed for button positioning */
+    text-align: center; /* Centers the button horizontally */
+  }
+  
+  .expandable-image {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: all 0.5s ease; /* Smooth transition effect */
+  }
+  
+  .expand-button {
+    position: absolute; /* Positions button over the image */
+    bottom: 10px; /* Adjust button position from bottom */
+    left: 50%; /* Centers button horizontally */
+    transform: translateX(-50%); /* Centers button horizontally */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    opacity: 0; /* Initially hides the button */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  }
+  
+  .image-container:hover .expand-button {
+    opacity: 1; /* Button appears on hover */
+  }
+  
+  .expandable-image.expanded {
+    width: 100%; /* Full-screen width when expanded */
+    height: auto;
+  }
+  
